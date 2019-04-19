@@ -42,3 +42,11 @@ localidad_id INT NOT NULL,
 FOREIGN KEY (persona_id) REFERENCES personas(id),
 FOREIGN KEY (localidad_id) REFERENCES localidades (id)
 );
+
+CREATE TABLE TAREAS (
+id INT PRIMARY KEY AUTO_INCREMENT,
+persona_id INT NOT NULL,
+tiulo_tarea VARCHAR(255) NOT NULL,
+descripcion_tarea VARCHAR(2000) NOT NULL,
+FOREIGN KEY (persona_id) REFERENCES personas(id),
+
